@@ -29,7 +29,7 @@ void	ft_map_size(t_info_map *data)
 	close(fd);
 }
 
-ft_malloc_map(t_info_map *data)
+v7oid	ft_malloc_map(t_info_map *data)
 {
 	char	*line;
 	int		fd;

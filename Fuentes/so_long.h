@@ -19,7 +19,18 @@ typedef struct s_info_map
 	int	finish;
 	int	step;			//ver para que sirve
 	char	**map;
+	t_images;
 }	t_info_map;
+
+typedef struct s_images
+{
+	void	*empty;
+	void	*wall;
+	void	*collect;
+	void	*player;
+	void	*winner;
+	void	*exit;
+}	t_images;
 
 	/---	ft_check_map	---/
 void	ft_check_outline(t_info_map *data)

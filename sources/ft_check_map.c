@@ -27,7 +27,8 @@ void	ft_check_outline(t_info_map *data)
 
 void	ft_check_format_dotber(t_info_map *data)
 {
-	if (ft_strcmpr(data->txt[ft_strlen(data->txt) - 4],".ber") != 0)
+	if (ft_strcmpr(&data->txt[ft_strlen(data->txt) - 4],".ber") != 0
+		|| ft_strlen(data->txt) =< 4)
 	{
 		write(1,"Bad extension\n",14);
 		exit (EXIT_FAILURE);
@@ -85,7 +86,7 @@ void	ft_check_map_objects(t_info_map *data)
 		}
 		j++;
 	}
-	if (objects[0] != 1 && objects[1] >= 1 && objects[2] != 1)
+	if (objects[0] != 1 || objects[1] < 1 ||9 objects[2] != 1)
 	{
 		write(1,"Bad map inputs\n",15);
 		exit (EXIT_FAILURE);

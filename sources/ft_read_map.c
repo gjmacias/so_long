@@ -21,7 +21,7 @@ void	ft_map_size(t_info_map *data)
 			write(1,"Map not valid\n",14);
 			exit (EXIT_FAILURE);
 		}
-		data->height++;
+		data->hight++;
 		free(line);
 		line = get_next_line(fd);
 	}
@@ -38,13 +38,13 @@ v7oid	ft_malloc_map(t_info_map *data)
 	fd = open(data->txt, O_RDONLY);
 	line = get_next_line(fd);
 	i = 0;
-	data->map = (char **)malloc(sizeof (char *) * (data->height + 1));
+	data->map = (char **)malloc(sizeof (char *) * (data->hight + 1));
 	if (!data->map)
 	{
 		write(1,"Map not malloc\n",15);
 		exit (EXIT_FAILURE);
 	}
-	while (i < data->height)
+	while (i < data->hight)
 	{
 		data->map[i] = line;
 		free(line);

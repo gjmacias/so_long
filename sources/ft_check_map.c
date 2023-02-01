@@ -1,3 +1,5 @@
+#include "so_long.h"
+
 void	ft_check_outline(t_info_map *data)
 {
 	int	i;

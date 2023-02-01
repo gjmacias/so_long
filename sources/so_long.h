@@ -17,9 +17,11 @@ typedef struct s_info_map
 	int	player;
 	int	count;
 	int	finish;
-	int	step;		//ver para que sirve
+	int	step;
 	char	*txt;
 	char	**map;
+	void	*mlx;
+	void	*win;
 	t_images;
 }	t_info_map;
 

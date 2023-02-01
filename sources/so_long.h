@@ -11,7 +11,7 @@
 typedef struct s_info_map
 {
 	int	hight;
-	int	weight;
+	int	width;
 	int	x;
 	int	y;
 	int	player;

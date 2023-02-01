@@ -80,7 +80,7 @@ void	move_d(t_info_map *data)
 	}
 }
 
-int	press_key(int keycode, t_info_map *data)
+int	ft_press_key(int keycode, t_info_map *data)
 {
 	if (keycode == ESC)
 		ft_exit(data);

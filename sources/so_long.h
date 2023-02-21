@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:33:41 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/02/21 18:50:07 by gmacias-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,7 @@ int		ft_press_key(int keycode, t_info_map *data);
 	/*---	ft_finish.c		---*/
 int		ft_exit(t_info_map *data);
 void	ft_game_result(t_info_map *data);
-
+	/*---	ft_utils.c		---*/
+int		ft_strlen(char *string);
+int		ft_strcmpr(char *s1, char *s2);
 #endif

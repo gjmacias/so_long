@@ -1,10 +1,22 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   so_long.c                                          :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 17:05:15 by gmacias-          #+#    #+#             */
+/*   Updated: 2023/02/21 17:06:41 by gmacias-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 void	ft_load_img(t_info_map *data)
 {
 	int	img_hight;
 	int	img_width;
-	
+
 	data->graph = malloc(sizeof(t_graph));
 	data->graph->player = mlx_xpm_file_to_image(data->mlx
 			PLAYER, &img_width, &img_hight);
@@ -44,14 +56,14 @@ int	ft_frame(t_info_map *data)
 {
 	mlx_clear_windows(data->mlx, data->win);
 	ft_draw_map(data);
-	if(data->count == 0 && data->player == 1 && data->finish == 1)
+	if (data->count == 0 && data->player == 1 && data->finish == 1)
 		ft_game_result(data);
 }
 
 int	main(int argc, char **argv)
 {
 	t_info_map	data;
-	
+
 	if (argc == 2)
 	{
 		data.mlx = mlx_init();
@@ -60,7 +72,7 @@ int	main(int argc, char **argv)
 		ft_malloc_map(&data);
 		ft_general_check(&data);
 		data.win = mlx_new_window(data.mlx, data.width * 40,
-					  data.hight * 40, "so_long");
+				data.hight * 40, "so_long");
 		mlx_hook(data.win, 17, 0, ft_exit, &data);
 		mlx_hook(data.win, 02, 0, ft_press_key, &data);
 		mlx_loop_hook(data.mlx, ft_frame, &data);

@@ -1,24 +1,36 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_read_map.c                                      :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2023/02/21 17:03:23 by gmacias-          #+#    #+#             */
+/*   Updated: 2023/02/21 17:05:09 by gmacias-         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "so_long.h"
 
 void	ft_map_size(t_info_map *data)
 {
 	char	*line;
 	int		fd;
-	
+
 	fd = open(data->txt, O_RDONLY);
 	line = get_next_line(fd);
 	if (!line)
 	{
-		write(1,"Map not read\n",13);
+		write(1, "Map not read\n", 13);
 		exit (EXIT_FAILURE);
 	}
 	data->width = ft_strlen(line);
 	data->height = 0;
-	while(line)
+	while (line)
 	{
 		if (ft_strlen(line) != data->width)
 		{
-			write(1,"Map not valid\n",14);
+			write(1, "Map not valid\n", 14);
 			exit (EXIT_FAILURE);
 		}
 		data->hight++;
@@ -29,19 +41,19 @@ void	ft_map_size(t_info_map *data)
 	close(fd);
 }
 
-v7oid	ft_malloc_map(t_info_map *data)
+void	ft_malloc_map(t_info_map *data)
 {
 	char	*line;
 	int		fd;
 	int		i;
-	
+
 	fd = open(data->txt, O_RDONLY);
 	line = get_next_line(fd);
 	i = 0;
 	data->map = (char **)malloc(sizeof (char *) * (data->hight + 1));
 	if (!data->map)
 	{
-		write(1,"Map not malloc\n",15);
+		write(1, "Map not malloc\n", 15);
 		exit (EXIT_FAILURE);
 	}
 	while (i < data->hight)
@@ -52,6 +64,6 @@ v7oid	ft_malloc_map(t_info_map *data)
 		i++;
 	}
 	data->map[i] = NULL;
-	line = NULL
+	line = NULL;
 	close(fd);
 }

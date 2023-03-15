@@ -60,19 +60,25 @@ typedef struct s_info_map
 	/*---	ft_read_map		---*/
 void	ft_map_size(t_info_map *data);
 void	ft_malloc_map(t_info_map *data);
+
 	/*---	ft_check_map	---*/
 void	ft_check_outline(t_info_map *data);
 void	ft_check_format_dotber(t_info_map *data);
 void	ft_check_map_inputs(t_info_map *data);
 void	ft_check_map_objects(t_info_map *data);
+
 	/*---	ft_draw_map		---*/
 void	ft_draw_map(t_info_map *data);
+
 	/*---	ft_move_key		---*/
 int		ft_press_key(int keycode, t_info_map *data);
+
 	/*---	ft_finish.c		---*/
 int		ft_exit(t_info_map *data);
 void	ft_game_result(t_info_map *data);
+
 	/*---	ft_utils.c		---*/
 int		ft_strlen(char *string);
 int		ft_strcmpr(char *s1, char *s2);
+
 #endif

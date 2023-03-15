@@ -27,6 +27,7 @@
 # define D		2
 
 # include <unistd.h>
+# include <stdlib.h>
 # include <../../get_next_line/get_next_line.h>
 # include <mlx.h>
 

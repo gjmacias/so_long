@@ -21,8 +21,8 @@ void	move_w(t_info_map *data)
 		{
 			if (data->map[data->y - 1][data->x] == 'C')
 				data->count--;
-			data->map[data->y][data->x] == '0';
-			data->map[data->y - 1][data->x] == 'P';
+			data->map[data->y][data->x] = '0';
+			data->map[data->y - 1][data->x] = 'P';
 		}
 		else if (data->map[data->y - 1][data->x] == 'E'
 				&& data->count == 0)
@@ -41,8 +41,8 @@ void	move_s(t_info_map *data)
 		{
 			if (data->map[data->y + 1][data->x] == 'C')
 				data->count--;
-			data->map[data->y][data->x] == '0';
-			data->map[data->y + 1][data->x] == 'P';
+			data->map[data->y][data->x] = '0';
+			data->map[data->y + 1][data->x] = 'P';
 		}
 		else if (data->map[data->y + 1][data->x] == 'E'
 				&& data->count == 0)
@@ -56,13 +56,13 @@ void	move_a(t_info_map *data)
 {
 	if (data->map[data->y][data->x - 1] != '1')
 	{
-		if (data->map[data->y1][data->x - 1] == 'C'
+		if (data->map[data->y + 1][data->x - 1] == 'C'
 				|| data->map[data->y][data->x - 1] == '0')
 		{
 			if (data->map[data->y][data->x - 1] == 'C')
 				data->count--;
-			data->map[data->y][data->x] == '0';
-			data->map[data->y][data->x - 1] == 'P';
+			data->map[data->y][data->x] = '0';
+			data->map[data->y][data->x - 1] = 'P';
 		}
 		else if (data->map[data->y][data->x - 1] == 'E'
 				&& data->count == 0)
@@ -76,13 +76,13 @@ void	move_d(t_info_map *data)
 {
 	if (data->map[data->y][data->x + 1] != '1')
 	{
-		if (data->map[data->y1][data->x + 1] == 'C'
+		if (data->map[data->y + 1][data->x + 1] == 'C'
 				|| data->map[data->y][data->x + 1] == '0')
 		{
 			if (data->map[data->y][data->x + 1] == 'C')
 				data->count--;
-			data->map[data->y][data->x] == '0';
-			data->map[data->y][data->x + 1] == 'P';
+			data->map[data->y][data->x] = '0';
+			data->map[data->y][data->x + 1] = 'P';
 		}
 		else if (data->map[data->y][data->x + 1] == 'E'
 				&& data->count == 0)

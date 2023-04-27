@@ -26,9 +26,9 @@ void	ft_check_outline(t_info_map *data)
 		i++;
 	}
 	i = 0;
-	while (i < data->height)
+	while (i < data->hight)
 	{
-		if (data->map[i][0] != '1' || data->map[i][data->height - 1] != '1')
+		if (data->map[i][0] != '1' || data->map[i][data->hight - 1] != '1')
 			err = 1;
 		i++;
 	}
@@ -55,10 +55,10 @@ void	ft_check_map_inputs(t_info_map *data)
 	int	j;
 
 	j = 0;
-	while (map->data[j])
+	while (data->map[j])
 	{
 		i = 0;
-		while (map->data[j][i])
+		while (data->map[j][i])
 		{
 			if (data->map[j][i] != '1' && data->map[j][i] != '0'
 				&& data->map[j][i] != 'C' && data->map[j][i] != 'P'

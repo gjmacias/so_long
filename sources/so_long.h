@@ -28,8 +28,9 @@
 
 # include <unistd.h>
 # include <stdlib.h>
-# include <../../get_next_line/get_next_line.h>
-# include <mlx.h>
+# include <fcntl.h>
+# include "../get_next_line/get_next_line.h"
+# include "../minilibx/mlx.h"
 
 typedef struct s_images
 {
@@ -79,7 +80,6 @@ int		ft_exit(t_info_map *data);
 void	ft_game_result(t_info_map *data);
 
 	/*---	ft_utils.c		---*/
-int		ft_strlen(char *string);
 int		ft_strcmpr(char *s1, char *s2);
 
 #endif

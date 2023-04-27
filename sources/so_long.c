@@ -17,19 +17,19 @@ void	ft_load_img(t_info_map *data)
 	int	img_hight;
 	int	img_width;
 
-	data->graph = malloc(sizeof(t_graph));
-	data->graph->player = mlx_xpm_file_to_image(data->mlx
+	data->images = malloc(sizeof(t_images));
+	data->images->player = mlx_xpm_file_to_image(data->mlx,
 			PLAYER, &img_width, &img_hight);
-	data->graph->wall = mlx_xpm_file_to_image(data->mlx
+	data->images->wall = mlx_xpm_file_to_image(data->mlx,
 			WALL, &img_width, &img_hight);
-	data->graph->empty = mlx_xpm_file_to_image(data->mlx
+	data->images->empty = mlx_xpm_file_to_image(data->mlx,
 			EMPTY, &img_width, &img_hight);
-	data->graph->exit = mlx_xpm_file_to_image(data->mlx
+	data->images->exit = mlx_xpm_file_to_image(data->mlx,
 			EXIT, &img_width, &img_hight);
-	data->graph->collect = mlx_xpm_file_to_image(data->mlx
+	data->images->collect = mlx_xpm_file_to_image(data->mlx,
 			COLLECT, &img_width, &img_hight);
-	data->graph->win = mlx_xpm_file_to_image(data->mlx
-			WIN, &img_width, &img_hight);
+	data->images->winner = mlx_xpm_file_to_image(data->mlx,
+			WINNER, &img_width, &img_hight);
 }
 
 void	ft_reset_data(t_info_map *data, char *name)
@@ -54,10 +54,11 @@ void	ft_general_check(t_info_map *data)
 
 int	ft_frame(t_info_map *data)
 {
-	mlx_clear_windows(data->mlx, data->win);
+	mlx_clear_window(data->mlx, data->win);
 	ft_draw_map(data);
 	if (data->count == 0 && data->player == 1 && data->finish == 1)
 		ft_game_result(data);
+	return (0);
 }
 
 int	main(int argc, char **argv)

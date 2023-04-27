@@ -10,16 +10,6 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *string)
-{
-	int	i;
-
-	i = 0;
-	while (string[i])
-		i++;
-	return (i);
-}
-
 int	ft_strcmpr(char *s1, char *s2)
 {
 	int	i;

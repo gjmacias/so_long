@@ -25,7 +25,7 @@ void	ft_map_size(t_info_map *data)
 		exit (EXIT_FAILURE);
 	}
 	data->width = ft_strlen(line);
-	data->height = 0;
+	data->hight = 0;
 	while (line)
 	{
 		if (ft_strlen(line) != data->width)

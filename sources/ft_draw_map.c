@@ -12,22 +12,22 @@
 
 #include "so_long.h"
 
-void	put_wall_img(t_init_map *data, int *j, int *i)
+void	put_wall_img(t_info_map *data, int *j, int *i)
 {
 	mlx_put_image_to_window(data->mlx, data->win,
-		data->graph->wall, j * 40, i * 40);
+		data->images->wall, (*j) * 40, (*i) * 40);
 }
 
-void	put_empty_img(t_init_map *data, int *j, int *i)
+void	put_empty_img(t_info_map *data, int *j, int *i)
 {
 	mlx_put_image_to_window(data->mlx, data->win,
-		data->graph->empty, j * 40, i * 40);
+		data->images->empty, (*j) * 40, (*i) * 40);
 }
 
-void	put_player_img(t_init_map *data, int *j, int *i)
+void	put_player_img(t_info_map *data, int *j, int *i)
 {
 	mlx_put_image_to_window(data->mlx, data->win,
-		data->graph->player, j * 40, i * 40);
+		data->images->player, (*j) * 40, (*i) * 40);
 }
 
 void	ft_draw_map(t_info_map *data)
@@ -49,10 +49,10 @@ void	ft_draw_map(t_info_map *data)
 				put_player_img(data, &i, &j);
 			else if (data->map[i][j] == 'C')
 				mlx_put_image_to_window(data->mlx, data->win,
-					data->graph->collect, j * 40, i * 40);
+					data->images->collect, j * 40, i * 40);
 			else if (data->map[i][j] == 'E')
 				mlx_put_image_to_window(data->mlx, data->win,
-					data->graph->exit, j * 40, i * 40);
+					data->images->exit, j * 40, i * 40);
 			i++;
 		}
 	}

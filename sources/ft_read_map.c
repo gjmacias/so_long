@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:03:23 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/02/21 17:05:09 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/04/30 22:08:30 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_map_size(t_info_map *data)
 	data->hight = 0;
 	while (line)
 	{
-		if (ft_strlen(line) != data->width)
+		if ((int)ft_strlen(line) != data->width)
 		{
 			write(1, "Map not valid\n", 14);
 			exit (EXIT_FAILURE);

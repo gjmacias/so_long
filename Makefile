@@ -1,46 +1,60 @@
+# **************************************************************************** #
+#                                                                              #
+#                                                         :::      ::::::::    #
+#    Makefile                                           :+:      :+:    :+:    #
+#                                                     +:+ +:+         +:+      #
+#    By: galo <marvin@42.fr>                        +#+  +:+       +#+         #
+#                                                 +#+#+#+#+#+   +#+            #
+#    Created: 2023/04/30 19:58:25 by galo              #+#    #+#              #
+#    Updated: 2023/04/30 22:09:29 by galo             ###   ########.fr        #
+#                                                                              #
+# **************************************************************************** #
+
 NAME = so_long
 
-HEADERS =	sources/so_long.h\
-			get_next_line/get_next_line.h\
-			minilibx/mlx.h
+HEADERS =	sources/so_long.h \
+		../get_next_line/get_next_line.h \
+		minilibx/mlx.h
 
 INCLUDES =	minilibx/libmlx.a
 
-SOURCES =	sources/ft_check_map.c\
-			sources/ft_draw_map.c\
-			sources/ft_finish.c\
-			sources/ft_move_key.c\
-			sources/ft_read_map.c\
-			sources/ft_utils.c\
-			sources/so_long.c\
-			get_next_line/get_next_line_utils.c\
-			get_next_line/get_next_line.c\
+SOURCES =	ft_check_map.c \
+		ft_draw_map.c \
+		ft_finish.c \
+		ft_move_key.c \
+		ft_read_map.c \
+		ft_utils.c \
+		so_long.c \
+		get_next_line_utils.c \
+		get_next_line.c
 
-OBJECTS = $(SOURCES:.c=.o)
 DIR_OBJ	= objects
+OBJECTS = $(addprefix $(DIR_OBJ)/,$(SOURCES:%.c=%.o))
 
 CC = gcc
+CFLAGS = -Wall -Werror -Wextra
 
-FLAGS = -Wall -Werror -Wextra
-
-MLX_FLAGS = -framework OpenGL -framework Appkit
+MLX_FLAGS = -Lmlx -lmlx -framework OpenGL -framework Appkit
 
 
+
+vpath %.c sources ../get_next_line
 
 all	:	make_lib make_dir $(NAME)
 
 make_lib:
 		@make -C minilibx
+		@echo "\n\n minilibx complete!\n\n"
 
 make_dir:
 		@mkdir -p $(DIR_OBJ)
 
-$(OBJS_DIR)/%.o: sources/%.c  $(INCLUDES) Makefile
+$(DIR_OBJ)/%.o: %.c $(HEADERS) | make_dir 
 		@$(CC) $(CFLAGS) -c $< -o $@
 
 $(NAME)	:	$(OBJECTS) $(HEADERS)
 	@echo "Compiling so long"
-	$(CC) $(FLAGS) $(MLX_FLAGS) $(OBJECTS) $(INCLUDES) -o $(NAME)
+	@$(CC) $(CFLAGS) $(MLX_FLAGS) $(OBJECTS) $(INCLUDES) -o $(NAME)
 	@echo "Done!"
 
 clean	:
@@ -51,7 +65,7 @@ clean	:
 
 fclean	:	clean
 	@echo "Removing execute (so_long)..."
-	rm -f $(NAME)
+	rm -rf $(NAME)
 	@echo "Done!"
 
 re	:	fclean all

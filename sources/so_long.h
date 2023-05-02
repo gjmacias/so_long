@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/04/30 19:31:48 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/01 21:50:08 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include "../../get_next_line/get_next_line.h"
-# include "../minilibx/mlx.h"
+# include "../mlx_linux/mlx.h"
 
 typedef struct s_images
 {

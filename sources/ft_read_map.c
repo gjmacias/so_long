@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:03:23 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/04/30 22:08:30 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/02 19:53:07 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,11 +24,11 @@ void	ft_map_size(t_info_map *data)
 		write(1, "Map not read\n", 13);
 		exit (EXIT_FAILURE);
 	}
-	data->width = ft_strlen(line);
+	data->width = ft_strlen(line) - 1;
 	data->hight = 0;
 	while (line)
 	{
-		if ((int)ft_strlen(line) != data->width)
+		if ((int)ft_strlen(line) - 1 != data->width)
 		{
 			write(1, "Map not valid\n", 14);
 			exit (EXIT_FAILURE);
@@ -50,7 +50,7 @@ void	ft_malloc_map(t_info_map *data)
 	fd = open(data->txt, O_RDONLY);
 	line = get_next_line(fd);
 	i = 0;
-	data->map = (char **)malloc(sizeof (char *) * (data->hight + 1));
+	data->map = (char **)malloc(sizeof (char *) * (data->hight));
 	if (!data->map)
 	{
 		write(1, "Map not malloc\n", 15);
@@ -59,7 +59,7 @@ void	ft_malloc_map(t_info_map *data)
 	while (i < data->hight)
 	{
 		data->map[i] = line;
-		free(line);
+		data->map[i][data->width] = '\0';
 		line = get_next_line(fd);
 		i++;
 	}

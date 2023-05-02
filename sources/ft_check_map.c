@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:37:51 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/02/21 17:12:30 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/05/02 20:00:20 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@ void	ft_check_outline(t_info_map *data)
 	err = 0;
 	while (i < data->width)
 	{
-		if (data->map[0][i] != '1' || data->map[data->width - 1][i] != '1')
+		if (data->map[0][i] != '1' || data->map[data->hight - 1][i] != '1')
 			err = 1;
 		i++;
 	}
 	i = 0;
 	while (i < data->hight)
 	{
-		if (data->map[i][0] != '1' || data->map[i][data->hight - 1] != '1')
+		if (data->map[i][0] != '1' || data->map[i][data->width - 1] != '1')
 			err = 1;
 		i++;
 	}
@@ -80,6 +80,7 @@ void	ft_check_map_objects(t_info_map *data)
 	int	i;
 	int	end;
 
+	end = 0;
 	j = 0;
 	while (data->map[j])
 	{

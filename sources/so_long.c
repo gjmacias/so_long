@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:05:15 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/02/21 17:34:55 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/05/02 19:59:09 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ void	ft_reset_data(t_info_map *data, char *name)
 	data->x = 0;
 	data->y = 0;
 	data->player = 0;
+	data->count = 0;
 	data->step = 0;
 	data->txt = name;
 	ft_load_img(data);
@@ -61,22 +62,23 @@ int	ft_frame(t_info_map *data)
 	return (0);
 }
 
-int	main(int argc, char **argv)
+int	main(int words, char **arguments)
 {
 	t_info_map	data;
 
-	if (argc == 2)
+	if (words == 2)
 	{
 		data.mlx = mlx_init();
-		ft_reset_data(&data, argv[1]);
+		ft_reset_data(&data, arguments[1]);
 		ft_map_size(&data);
 		ft_malloc_map(&data);
 		ft_general_check(&data);
-		data.win = mlx_new_window(data.mlx, data.width * 40,
+	/*	data.win = mlx_new_window(data.mlx, (data.width - 1) * 40,
 				data.hight * 40, "so_long");
 		mlx_hook(data.win, 17, 0, ft_exit, &data);
 		mlx_hook(data.win, 02, 0, ft_press_key, &data);
 		mlx_loop_hook(data.mlx, ft_frame, &data);
-		mlx_loop(data.mlx);
+		mlx_loop(data.mlx);*/
 	}
+	return (0);
 }

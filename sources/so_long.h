@@ -6,19 +6,19 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/01 21:50:08 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:16:23 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef SO_LONG_H
 # define SO_LONG_H
 
-# define COLLECT	"../images/collect.xpm"
-# define EMPTY		"../images/empty.xpm"
-# define EXIT		"../images/exit.xpm"
-# define PLAYER		"../images/player.xpm"
-# define WALL		"../images/wall.xpm"
-# define WINNER		"../images/win.xpm"
+# define COLLECT	"./images/collect.xpm"
+# define EMPTY		"./images/empty.xpm"
+# define EXIT		"./images/exit.xpm"
+# define PLAYER		"./images/player.xpm"
+# define WALL		"./images/wall.xpm"
+# define WINNER		"./images/win.xpm"
 
 # define ESC	53
 # define W		13

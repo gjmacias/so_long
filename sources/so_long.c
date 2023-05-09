@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:05:15 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/02 19:59:09 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/09 18:31:44 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,6 +41,7 @@ void	ft_reset_data(t_info_map *data, char *name)
 	data->player = 0;
 	data->count = 0;
 	data->step = 0;
+	data->finish = 0;
 	data->txt = name;
 	ft_load_img(data);
 }
@@ -73,12 +74,12 @@ int	main(int words, char **arguments)
 		ft_map_size(&data);
 		ft_malloc_map(&data);
 		ft_general_check(&data);
-	/*	data.win = mlx_new_window(data.mlx, (data.width - 1) * 40,
+		data.win = mlx_new_window(data.mlx, data.width * 40,
 				data.hight * 40, "so_long");
 		mlx_hook(data.win, 17, 0, ft_exit, &data);
 		mlx_hook(data.win, 02, 0, ft_press_key, &data);
 		mlx_loop_hook(data.mlx, ft_frame, &data);
-		mlx_loop(data.mlx);*/
+		mlx_loop(data.mlx);
 	}
 	return (0);
 }

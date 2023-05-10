@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:03:23 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/02 19:53:07 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/10 17:37:51 by gmacias-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ void	ft_map_size(t_info_map *data)
 	line = get_next_line(fd);
 	if (!line)
 	{
-		write(1, "Map not read\n", 13);
+		write(1, "Error\nMap not read\n", 19);
 		exit (EXIT_FAILURE);
 	}
 	data->width = ft_strlen(line) - 1;
@@ -30,7 +30,7 @@ void	ft_map_size(t_info_map *data)
 	{
 		if ((int)ft_strlen(line) - 1 != data->width)
 		{
-			write(1, "Map not valid\n", 14);
+			write(1, "Error\nMap not valid\n", 14);
 			exit (EXIT_FAILURE);
 		}
 		data->hight++;
@@ -53,7 +53,7 @@ void	ft_malloc_map(t_info_map *data)
 	data->map = (char **)malloc(sizeof (char *) * (data->hight));
 	if (!data->map)
 	{
-		write(1, "Map not malloc\n", 15);
+		write(1, "Error\nMap not malloc\n", 15);
 		exit (EXIT_FAILURE);
 	}
 	while (i < data->hight)

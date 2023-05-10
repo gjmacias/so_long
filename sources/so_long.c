@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 17:05:15 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/09 18:31:44 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/10 17:38:11 by gmacias-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,7 @@ void	ft_general_check(t_info_map *data)
 	ft_check_format_dotber(data);
 	ft_check_map_inputs(data);
 	ft_check_map_objects(data);
+	ft_check_is_posible(data);
 }
 
 int	ft_frame(t_info_map *data)

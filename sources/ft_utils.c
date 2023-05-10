@@ -6,9 +6,11 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:36:03 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/02/21 18:49:10 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/05/10 17:39:02 by gmacias-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "so_long.h"
 
 int	ft_strcmpr(char *s1, char *s2)
 {

@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/09 18:16:23 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/10 17:09:30 by gmacias-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@
 # include <stdlib.h>
 # include <fcntl.h>
 # include "../../get_next_line/get_next_line.h"
-# include "../mlx_linux/mlx.h"
+# include "../mlx/mlx.h"
 
 typedef struct s_images
 {
@@ -68,6 +68,7 @@ void	ft_check_outline(t_info_map *data);
 void	ft_check_format_dotber(t_info_map *data);
 void	ft_check_map_inputs(t_info_map *data);
 void	ft_check_map_objects(t_info_map *data);
+void	ft_check_is_posible(t_info_map *data);
 
 	/*---	ft_draw_map		---*/
 void	ft_draw_map(t_info_map *data);
@@ -81,5 +82,5 @@ void	ft_game_result(t_info_map *data);
 
 	/*---	ft_utils.c		---*/
 int		ft_strcmpr(char *s1, char *s2);
-
+void	ft_prove_first(t_info_map *data, int j, int i, int *posible);
 #endif

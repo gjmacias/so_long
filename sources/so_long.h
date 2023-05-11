@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/10 17:09:30 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/05/11 10:45:58 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,15 @@ typedef struct s_images
 	void	*winner;
 }	t_images;
 
+typedef struct s_checker
+{
+	int	**map;
+	int	x;
+	int	y;
+	int	coins_left;
+	int	result;
+}	t_checker;
+
 typedef struct s_info_map
 {
 	int			hight;
@@ -69,6 +78,8 @@ void	ft_check_format_dotber(t_info_map *data);
 void	ft_check_map_inputs(t_info_map *data);
 void	ft_check_map_objects(t_info_map *data);
 void	ft_check_is_posible(t_info_map *data);
+	/*---	ft_checker_is_posible	---*/
+void	ft_is_posible(t_info_map *data, int j, int i,int left);
 
 	/*---	ft_draw_map		---*/
 void	ft_draw_map(t_info_map *data);

@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 16:37:51 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/10 17:50:06 by gmacias-         ###   ########.fr       */
+/*   Updated: 2023/05/11 11:09:12 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -124,5 +124,5 @@ void	ft_check_is_posible(t_info_map *data)
 				left++;
 		}
 	}
-	ft_is_posible(data, j[0], j[1], left);
+//	ft_is_posible(data, j[0], j[1], left);
 }

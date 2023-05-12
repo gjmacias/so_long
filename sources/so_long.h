@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/11 10:45:58 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/12 11:48:27 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,10 +45,7 @@ typedef struct s_images
 typedef struct s_checker
 {
 	int	**map;
-	int	x;
-	int	y;
 	int	coins_left;
-	int	result;
 }	t_checker;
 
 typedef struct s_info_map

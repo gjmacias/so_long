@@ -2,8 +2,8 @@
 
 void	malloc_and_fill(t_checker *c, t_info_map *data)
 {
-	int i;
-	int j;
+	int	i;
+	int	j;
 
 	c->map = malloc(sizeof(int *) * data->hight);
 	i = -1;
@@ -18,11 +18,11 @@ void	malloc_and_fill(t_checker *c, t_info_map *data)
 	}
 }
 
-void	free_checker(t_checker *c, int	hight)
+void	free_checker(t_checker *c, int hight)
 {
-	int i;
- 
-	i = -1; 
+	int	i;
+
+	i = -1;
 	while (++i < hight)
 		free(c->map[i]);
 	free(c->map);
@@ -47,9 +47,9 @@ void	iter_checker(t_checker *c, t_info_map *data, int i, int j)
 	}
 }
 
-void	ft_is_posible(t_info_map *data, int j, int i,int left)
+void	ft_is_posible(t_info_map *data, int j, int i, int left)
 {
-	t_checker c;
+	t_checker	c;
 
 	c.coins_left = left;
 	malloc_and_fill(&c, data);

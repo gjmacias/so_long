@@ -6,7 +6,7 @@
 /*   By: gmacias- <gmacias-@student.42barcel>       +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/02/21 18:29:12 by gmacias-          #+#    #+#             */
-/*   Updated: 2023/05/12 11:48:27 by galo             ###   ########.fr       */
+/*   Updated: 2023/05/12 12:03:45 by galo             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,7 +76,7 @@ void	ft_check_map_inputs(t_info_map *data);
 void	ft_check_map_objects(t_info_map *data);
 void	ft_check_is_posible(t_info_map *data);
 	/*---	ft_checker_is_posible	---*/
-void	ft_is_posible(t_info_map *data, int j, int i,int left);
+void	ft_is_posible(t_info_map *data, int j, int i, int left);
 
 	/*---	ft_draw_map		---*/
 void	ft_draw_map(t_info_map *data);

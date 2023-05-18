@@ -96,13 +96,25 @@ int	ft_press_key(int keycode, t_info_map *data)
 {
 	if (keycode == ESC)
 		ft_exit(data);
-	else if (keycode == W)
+	else if (keycode == W && data->finish == 0)
+	{
 		move_w(data);
-	else if (keycode == S)
+		ft_write_itoa(data->step);
+	}
+	else if (keycode == S && data->finish == 0)
+	{
 		move_s(data);
-	else if (keycode == A)
+		ft_write_itoa(data->step);
+	}
+	else if (keycode == A && data->finish == 0)
+	{
 		move_a(data);
-	else if (keycode == D)
+		ft_write_itoa(data->step);
+	}
+	else if (keycode == D && data->finish == 0)
+	{
 		move_d(data);
+		ft_write_itoa(data->step);
+	}
 	return (0);
 }

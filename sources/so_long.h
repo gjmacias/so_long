@@ -50,19 +50,19 @@ typedef struct s_checker
 
 typedef struct s_info_map
 {
-	int			hight;
-	int			width;
-	int			x;
-	int			y;
-	int			player;
-	int			count;
-	int			finish;
-	int			step;
-	char		*txt;
-	char		**map;
-	void		*mlx;
-	void		*win;
-	t_images	*images;
+	int				hight;
+	int				width;
+	int				x;
+	int				y;
+	int				player;
+	int				count;
+	int				finish;
+	unsigned int	step;
+	char			*txt;
+	char			**map;
+	void			*mlx;
+	void			*win;
+	t_images		*images;
 }	t_info_map;
 
 	/*---	ft_read_map		---*/
@@ -75,6 +75,7 @@ void	ft_check_format_dotber(t_info_map *data);
 void	ft_check_map_inputs(t_info_map *data);
 void	ft_check_map_objects(t_info_map *data);
 void	ft_check_is_posible(t_info_map *data);
+
 	/*---	ft_checker_is_posible	---*/
 void	ft_is_posible(t_info_map *data, int j, int i, int left);
 
@@ -90,5 +91,5 @@ void	ft_game_result(t_info_map *data);
 
 	/*---	ft_utils.c		---*/
 int		ft_strcmpr(char *s1, char *s2);
-void	ft_prove_first(t_info_map *data, int j, int i, int *posible);
+void	ft_write_itoa(unsigned int n);
 #endif

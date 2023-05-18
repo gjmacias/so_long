@@ -21,3 +21,20 @@ int	ft_strcmpr(char *s1, char *s2)
 		i++;
 	return (s1[i] - s2[i]);
 }
+
+ft_itoa(unsigned int n)
+{
+	char	c;
+
+	if (n >= 10)
+		ft_itoa(n / 10);
+	c = (n % 10) + '0';
+	write (1, &c, 1);
+}
+
+void	ft_write_itoa(unsigned int n)
+{
+	write(1, "Number of steps: ", 17);
+	ft_itoa(n);
+	write(1, "\n", 1);	
+}

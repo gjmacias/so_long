@@ -34,7 +34,7 @@ void	ft_check_outline(t_info_map *data)
 	}
 	if (err != 0)
 	{
-		write(1, "Error\nMap outline bad\n", 23);
+		write(2, "Error\nMap outline bad\n", 23);
 		exit (EXIT_FAILURE);
 	}
 }
@@ -44,7 +44,7 @@ void	ft_check_format_dotber(t_info_map *data)
 	if (ft_strcmpr(&data->txt[ft_strlen(data->txt) - 4], ".ber") != 0
 		|| ft_strlen(data->txt) <= 4)
 	{
-		write(1, "Error\nBad extension\n", 20);
+		write(2, "Error\nBad extension\n", 20);
 		exit (EXIT_FAILURE);
 	}
 }
@@ -64,7 +64,7 @@ void	ft_check_map_inputs(t_info_map *data)
 				&& data->map[j][i] != 'C' && data->map[j][i] != 'P'
 				&& data->map[j][i] != 'E')
 			{
-				write(1, "Error\nBad map inputs\n", 21);
+				write(2, "Error\nBad map inputs\n", 21);
 				exit (EXIT_FAILURE);
 			}
 			else
@@ -97,7 +97,7 @@ void	ft_check_map_objects(t_info_map *data)
 	}
 	if (data->player != 1 || data->count < 1 || end != 1)
 	{
-		write(1, "Error\nBad map inputs\n", 21);
+		write(2, "Error\nBad map inputs\n", 21);
 		exit (EXIT_FAILURE);
 	}
 }

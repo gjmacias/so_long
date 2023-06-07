@@ -90,6 +90,7 @@ int		ft_exit(t_info_map *data);
 void	ft_game_result(t_info_map *data);
 
 	/*---	ft_utils.c		---*/
+char	*ft_strdup(char *str);
 int		ft_strcmpr(char *s1, char *s2);
 void	ft_write_itoa(unsigned int n);
 #endif

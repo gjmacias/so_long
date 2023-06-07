@@ -64,6 +64,20 @@ int	ft_frame(t_info_map *data)
 	return (0);
 }
 
+/*
+#include <stdio.h>
+
+void	print(t_info_map *data)
+{
+	int	i;
+	
+	i = 0;
+	while(data->map[i])
+		printf("%s\n", data->map[i++]);
+	exit(EXIT_FAILURE);
+}
+*/
+
 int	main(int words, char **arguments)
 {
 	t_info_map	data;

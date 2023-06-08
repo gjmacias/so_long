@@ -38,10 +38,10 @@ void	ft_draw_map(t_info_map *data)
 	int	j;
 
 	i = 0;
-	while (data->map[i] && i <= 10)
+	while (data->map[i])
 	{
 		j = 0;
-		while (data->map[i][j] && j <= 50)
+		while (data->map[i][j])
 		{
 			if (data->map[i][j] == '1')
 				put_wall_img(data, &j, &i);

@@ -54,7 +54,7 @@ void	ft_malloc_map(t_info_map *data)
 
 	fd = open(data->txt, O_RDONLY);
 	i = 0;
-	data->map = (char **)malloc(sizeof (char *) * (data->hight));
+	data->map = (char **)malloc(sizeof (char *) * (data->hight + 1));
 	if (!data->map)
 		ft_bad_malloc();
 	while (i < data->hight)

@@ -72,9 +72,8 @@ void	print(t_info_map *data)
 	int	i;
 	
 	i = 0;
-	while(data->map[i])
+	while(data->map[i] != NULL)
 		printf("%s\n", data->map[i++]);
-	exit(EXIT_FAILURE);
 }
 */
 

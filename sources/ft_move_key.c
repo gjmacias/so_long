@@ -14,7 +14,8 @@
 
 void	move_w(t_info_map *data)
 {
-	if (data->map[data->y - 1][data->x] != '1')
+	if (data->map[data->y - 1][data->x] != '1'
+		&& data->map[data->y - 1][data->x] != 'E')
 	{
 		if (data->map[data->y - 1][data->x] == 'C'
 				|| data->map[data->y - 1][data->x] == '0')
@@ -24,17 +25,19 @@ void	move_w(t_info_map *data)
 			data->map[data->y][data->x] = '0';
 			data->map[data->y - 1][data->x] = 'P';
 		}
-		else if (data->map[data->y - 1][data->x] == 'E'
-				&& data->count == 0)
-			data->finish = 1;
 		data->y--;
 		data->step++;
+		ft_write_itoa(data->step);
 	}
+	else if (data->map[data->y - 1][data->x] == 'E'
+		&& data->count == 0)
+		data->finish = 1;
 }
 
 void	move_s(t_info_map *data)
 {
-	if (data->map[data->y + 1][data->x] != '1')
+	if (data->map[data->y + 1][data->x] != '1'
+		&& data->map[data->y + 1][data->x] != 'E')
 	{
 		if (data->map[data->y + 1][data->x] == 'C'
 				|| data->map[data->y + 1][data->x] == '0')
@@ -44,17 +47,19 @@ void	move_s(t_info_map *data)
 			data->map[data->y][data->x] = '0';
 			data->map[data->y + 1][data->x] = 'P';
 		}
-		else if (data->map[data->y + 1][data->x] == 'E'
-				&& data->count == 0)
-			data->finish = 1;
 		data->y++;
 		data->step++;
+		ft_write_itoa(data->step);
 	}
+	else if (data->map[data->y + 1][data->x] == 'E'
+		&& data->count == 0)
+		data->finish = 1;
 }
 
 void	move_a(t_info_map *data)
 {
-	if (data->map[data->y][data->x - 1] != '1')
+	if (data->map[data->y][data->x - 1] != '1'
+		&& data->map[data->y][data->x - 1] != 'E')
 	{
 		if (data->map[data->y][data->x - 1] == 'C'
 				|| data->map[data->y][data->x - 1] == '0')
@@ -64,17 +69,19 @@ void	move_a(t_info_map *data)
 			data->map[data->y][data->x] = '0';
 			data->map[data->y][data->x - 1] = 'P';
 		}
-		else if (data->map[data->y][data->x - 1] == 'E'
-				&& data->count == 0)
-			data->finish = 1;
 		data->x--;
 		data->step++;
+		ft_write_itoa(data->step);
 	}
+	else if (data->map[data->y][data->x - 1] == 'E'
+		&& data->count == 0)
+		data->finish = 1;
 }
 
 void	move_d(t_info_map *data)
 {
-	if (data->map[data->y][data->x + 1] != '1')
+	if (data->map[data->y][data->x + 1] != '1'
+		&& data->map[data->y][data->x + 1] != 'E')
 	{
 		if (data->map[data->y][data->x + 1] == 'C'
 				|| data->map[data->y][data->x + 1] == '0')
@@ -84,12 +91,13 @@ void	move_d(t_info_map *data)
 			data->map[data->y][data->x] = '0';
 			data->map[data->y][data->x + 1] = 'P';
 		}
-		else if (data->map[data->y][data->x + 1] == 'E'
-				&& data->count == 0)
-			data->finish = 1;
 		data->x++;
 		data->step++;
+		ft_write_itoa(data->step);
 	}
+	else if (data->map[data->y][data->x + 1] == 'E'
+		&& data->count == 0)
+		data->finish = 1;
 }
 
 int	ft_press_key(int keycode, t_info_map *data)
@@ -97,24 +105,12 @@ int	ft_press_key(int keycode, t_info_map *data)
 	if (keycode == ESC)
 		ft_exit(data);
 	else if (keycode == W && data->finish == 0)
-	{
 		move_w(data);
-		ft_write_itoa(data->step);
-	}
 	else if (keycode == S && data->finish == 0)
-	{
 		move_s(data);
-		ft_write_itoa(data->step);
-	}
 	else if (keycode == A && data->finish == 0)
-	{
 		move_a(data);
-		ft_write_itoa(data->step);
-	}
 	else if (keycode == D && data->finish == 0)
-	{
 		move_d(data);
-		ft_write_itoa(data->step);
-	}
 	return (0);
 }

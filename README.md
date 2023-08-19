@@ -11,9 +11,9 @@ Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos 
 
 En este ejemplo tenemos los siguientes componentes del juego:
 
-1111111
+`1111111
 1P0C0E1
-1111111
+1111111`
 
 ◦ '1': Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
 

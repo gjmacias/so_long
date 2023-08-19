@@ -11,9 +11,9 @@ Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos 
 
 En este ejemplo tenemos los siguientes componentes del juego:
 
-`1111111
-1P0C0E1
-1111111`
+*1111111  
+1**P**0**C**0**E**1  
+1111111*  
 
 ◦ '1': Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
 
@@ -23,7 +23,7 @@ En este ejemplo tenemos los siguientes componentes del juego:
 
 ◦ 'C': Los consumibles, podran haber tantos como gustes (minimo 1) y deberan ser alcanzables en todo momento.
 
-***Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error***
+***Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error.***  
 
 ### Que utilizamos?
 En nuestro ft_printf tenemos solo las siguentes funciones de librerias externas autorizadas:

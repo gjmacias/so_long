@@ -4,12 +4,11 @@ Este proyecto es un pequeño juego en 2D. Está diseñado para trabajar con text
 * [Que es so_long?](#que-es-so_long)
 * [Que utilizamos?](#que-utilizamos)
 * [Como funciona?](#como-funciona)
-* [Como utilizamos la libreria?](#como-utilizamos-la-libreria)
 
 ### Que es so_long?
 Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos los consumibles y escapar en la menor cantidad de movimientos posibles de un mapa creado por ti mismo!
 
-En este ejemplo tenemos los siguientes componentes del juego:
+En el siguiente ejemplo tenemos los siguientes componentes del mapa:
 
 *1111111  
 1**P**0**C**0**E**1  
@@ -25,43 +24,42 @@ En este ejemplo tenemos los siguientes componentes del juego:
 
 ***Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error.***  
 
+Por último estos serán los siguientes controles:
+|TECLA|ACCIÓN|
+|---|---|
+|`W`|Mover el personaje hacia arriba|
+|`A`|Mover el personaje hacia la izquierda|
+|`S`|Mover el personaje hacia abajo|
+|`D` |Mover el personaje hacia la derecha|
+|`ESC`|Cierra el juego sin **memory leaks**|
+
 ### Que utilizamos?
-En nuestro ft_printf tenemos solo las siguentes funciones de librerias externas autorizadas:
+En nuestro **so_long** tenemos solo las siguentes funciones de librerias externas autorizadas:
 
 | Función  | Descripción														 			|
 |-------|-----------------------------------------------------------------------------------|
 | malloc | Solicitar un bloque de memoria del tamaño suministrado como parámetro.     													|
 | free | Desasigna un bloque de memoria que se había asignado previamente mediante una llamada. 											|
 | write | Hace que los bytes que indiques del buffer sean escritos en el file descriptor seleccionado.								|
-| va_start | Permite el acceso a los argumentos de la función variada.														|
-| va_arg | Accede al siguiente argumento de la función variada.               											|
-| va_copy | Hace una copia de los argumentos de la función variádica.               									|
-| va_end | Finaliza el recorrido de los argumentos de la función variada.        |
+| open |  Abre el archivo del sistema seleccionado.													|
+| close |  Cierra el archivo del sistema seleccionado.               											|
+| read |  Lee el contenido del archivo del sistema seleccionado.               									|
+| exit | Finaliza inmediatamente el programa liberando la memoria dinamica asignada        |
 
+Tambien necesitaremos **OBLIGATORIAMENTE** la libreria *minilibx* para este proyecto.
 
 ### Como funciona?
 
-La meta es crear una libreria que contenga todo nuestro codigo para poder utilizarlo en futuros proyectos llamado: *libftprintf.a*
+Para compilar el programa seguimos los siguientes pasos:
 
-Para crear esta libreria seguimos los siguientes pasos:
-
-	git clone https://github.com/gjmacias/ft_printf
-	cd ft_printf
+	git clone https://github.com/gjmacias/so_long
+	cd so_long
 	make
+Luego ejecutamos el programa pasandole de parametro la ubicacion del archivo del mapa:
 
-Al revisar el directorio, en alguna parte encontraras la libreria: *libftprintf.a*
+	./so_long maps/map.ber
 
-### Como utilizamos la libreria?
-
-Para utilizarlo primero debes de  tener la libreria: *libftprintf.a*.
-Luego debes añadirlo en el compilador, primero la ruta de libftprintf.a y luego el nombre de la libreria
-
-`gcc archivos.c -L<ruta de libftprintf.a> -lftprintf`
-
--L tomara la ubicacion de la libreria<br>
--l tomara el nombre de la libreria. en este caso seran los caracteres que vegan despues de `lib` de tu libreria.
-
-y eso seria todo!
+¡Y eso seria todo!¡Estas liso para jugar!
 
 # Quizás pueda interesarte!
 

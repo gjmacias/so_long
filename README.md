@@ -23,7 +23,7 @@ En este ejemplo tenemos los siguientes componentes del juego:
 
 ◦ 'C': Los consumibles, podran haber tantos como gustes (minimo 1) y deberan ser alcanzables en todo momento.
 
-*Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error*
+***Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error***
 
 ### Que utilizamos?
 En nuestro ft_printf tenemos solo las siguentes funciones de librerias externas autorizadas:

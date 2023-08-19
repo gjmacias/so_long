@@ -1,27 +1,29 @@
 # so_long - gmacias-
-En este proyecto recrearemos desde 0 la funcion printf.
-
+Este proyecto es un pequeño juego en 2D. Está diseñado para trabajar con texturas y sprites junto algunos otros elementos básicos de jugabilidad.
 ### Indice
-* [Que es ft_printf?](#que-es-ft_printf)
+* [Que es so_long?](#que-es-so_long)
 * [Que utilizamos?](#que-utilizamos)
 * [Como funciona?](#como-funciona)
 * [Como utilizamos la libreria?](#como-utilizamos-la-libreria)
 
-### Que es ft_printf?
-ft_printf es un projecto de [42][1] donde recreamos el funcionamiento de `printf`.
-En nuestro ft_printf puedes usar las siguientes conversiones:
+### Que es so_long?
+Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos los consumibles y escapar en la menor cantidad de movimientos posibles de un mapa creado por ti mismo!
 
-| Conversión  | Descripción|
-|-------|-----------------------------------------------------------------------------------|
-| **%c** | Imprime un solo carácter.   |
-| **%s** | Imprime una string (como se define por defecto en C).  	|
-| **%p** | El puntero void * dado como argumento se imprime en formato hexadecimal.         |
-| **%d** | Imprime un número decimal (base 10).		|  
-| **%i** | Imprime un entero en base 10.  	|
-| **%u** | Imprime un número decimal (base 10) sin signo.      |
-| **%x** | Imprime un número hexadecimal (base 16) en minúsculas.                				|
-| **%X** | Imprime un número hexadecimal (base 16) en mayúsculas.                				|
-| **%%** | Imprime el símbolo del porcentaje.                 			      |				
+En este ejemplo tenemos los siguientes componentes del juego:
+
+1111111
+1P0C0E1
+1111111
+
+◦ '1': Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
+
+◦ 'P': Será el jugador y solo podra haber uno en todo el mapa.
+
+◦ 'E': Será la salida y solo podra haber uno en todo el mapa.
+
+◦ 'C': Los consumibles, podran haber tantos como gustes (minimo 1) y deberan ser alcanzables en todo momento.
+
+*Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error*
 
 ### Que utilizamos?
 En nuestro ft_printf tenemos solo las siguentes funciones de librerias externas autorizadas:

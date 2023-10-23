@@ -10,17 +10,17 @@ Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos 
 
 En el siguiente ejemplo tenemos los siguientes componentes del mapa:
 
-	*1111111  
-	1**P**0**C**0**E**1  
-	1111111*  
+	1111111  
+	1P0C0E1  
+	1111111  
 
-◦ '1': Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
+◦ **'1'**: Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
 
-◦ 'P': Será el jugador y solo podra haber uno en todo el mapa.
+◦ **'P'**: Será el jugador y solo podra haber uno en todo el mapa.
 
-◦ 'E': Será la salida y solo podra haber uno en todo el mapa.
+◦ **'E'**: Será la salida y solo podra haber uno en todo el mapa.
 
-◦ 'C': Los consumibles, podran haber tantos como gustes (minimo 1) y deberan ser alcanzables en todo momento.
+◦ **'C'**: Los consumibles, podran haber tantos como gustes (minimo 1) y deberan ser alcanzables en todo momento.
 
 ***Cabe recalcar que el mapa debe ser realizable en todo momento, en caso de que sea imposible, retornara error.***  
 

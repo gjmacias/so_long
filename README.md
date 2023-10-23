@@ -10,9 +10,9 @@ Este proyecto consiste en la creacion de un juego 2D, donde debes recoger todos 
 
 En el siguiente ejemplo tenemos los siguientes componentes del mapa:
 
-*1111111  
-1**P**0**C**0**E**1  
-1111111*  
+	*1111111  
+	1**P**0**C**0**E**1  
+	1111111*  
 
 ◦ '1': Paredes, para poder jugar todo el mapa debe estar rodeado de ellos.
 
